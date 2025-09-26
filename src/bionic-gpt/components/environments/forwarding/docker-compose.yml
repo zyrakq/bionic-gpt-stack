@@ -1,0 +1,8 @@
+services:
+  bionicgpt-postgresdb:
+    ports:
+      - 5432:5432
+  
+  bionicgpt:
+    ports:
+      - 7703:7703

@@ -1,0 +1,33 @@
+services:
+  bionicgpt-llm-api:
+    networks:
+      - bionicgpt-workspace-network
+
+  bionicgpt-embeddings-api:
+    networks:
+      - bionicgpt-workspace-network
+
+  bionicgpt-chunking-engine:
+    networks:
+      - bionicgpt-workspace-network
+
+
+  bionicgpt-postgresdb:
+    networks:
+      - bionicgpt-workspace-network
+
+  bionicgpt-db-migrations:
+    networks:
+      - bionicgpt-workspace-network
+
+  bionicgpt-rag-engine:
+    networks:
+      - bionicgpt-workspace-network
+  
+  bionicgpt:
+    networks:
+      - bionicgpt-workspace-network
+
+networks:
+  bionicgpt-workspace-network:
+    external: true
